@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palak's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- WRAPPER FOR BLUR BACKGROUND -->
+    <div id="pageContent">
+
+        <header>
+            <h1>Hi, I'm Palak</h1>
+            <div class="profile-image"></div>
+            <p>ECE (AI) student | Aspiring Developer</p>
+        </header>
+
+        <!-- ABOUT / SUMMARY -->
+        <!-- ABOUT / SUMMARY -->
+<a href="about.html" class="about-link">
+    <section class="about-box">
+        <h2>About Me</h2>
+        <p>
+            I am an ECE (AI) undergraduate at IGDTUW with interests in Computer Vision,
+            Deep Learning, and Web Development. I enjoy building intelligent systems
+            as well as user-friendly digital platforms that create real impact.
+        </p>
+    </section>
+</a>
+
+
+        <!-- EDUCATION -->
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>IGDTUW</strong> – B.Tech ECE (AI) <br>
+                    CGPA: 7.355 | 2024 – 2028
+                </li>
+                <li>
+                    <strong>MD Memorial Sr. Sec. Public School</strong> – Class XII (CBSE) <br>
+                    84.4% | 2024
+                </li>
+                <li>
+                    <strong>Sherwood Convent School</strong> – Class X (CBSE) <br>
+                    91.8% | 2022
+                </li>
+            </ul>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <h2>Technical Skills</h2>
+            <p><strong>Languages:</strong> Python, C++</p>
+            <p><strong>AI & ML:</strong> Computer Vision, YOLOv5s, Deep Learning, OpenCV, Transfer Learning</p>
+            <p><strong>Tools:</strong> Git, GitHub, Jupyter Notebook, Google Colab, Three.js, LabelImg</p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section>
+            <h2>Experience</h2>
+
+            <p>
+                <strong>Research Intern – Computer Vision & Deep Learning</strong><br>
+                Anveshan Foundation (Jun – Jul 2025)<br>
+                Worked on gesture detection models using Transfer Learning.
+            </p>
+
+            <p>
+                <strong>Digital Marketing Intern</strong><br>
+                Property Colors (Jun – Aug 2025)<br>
+                Improved organic engagement and brand visibility.
+            </p>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <h2>Projects</h2>
+
+            <p><strong>Real-Time Sign Language Translator</strong></p>
+            <p><strong>Project SPARSH – Assistive Technology Platform</strong></p>
+            <p><strong>Game-Based Learning Platform</strong></p>
+            <p><strong>Project Garuda – Social Impact Initiative</strong></p>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section>
+            <h2>Achievements & Leadership</h2>
+            <ul>
+                <li>Winner – Bar Bar Becho (MAATI)</li>
+                <li>Media Coordinator – IEEE IGDTUW & Neutron Club</li>
+            </ul>
+        </section>
+
+        <!-- CONTACT -->
+        <section>
+            <h2>Contact</h2>
+            <p>Email: sharma.palak2455@gmail.com</p>
+            <p>GitHub: github.com/Sharmapalak245</p>
+            <p>LinkedIn: linkedin.com/in/palak-kumari-ab0852323</p>
+        </section>
+
+        <div class="back-link-container">
+            <a href="landing.html" class="back-link">
+               ← Back to Welcome Page
+            </a>
+        </div>
+
+    </div>
+
+    <img src="images/prof.jpeg" alt="Palak's photo" id="profilePic">
+
+    <!-- JS FOR IMAGE CLICK + BLUR -->
+    <script>
+        const img = document.getElementById("profilePic");
+        const page = document.getElementById("pageContent");
+
+        img.onclick = function () {
+            img.classList.toggle("active");
+            page.classList.toggle("blur");
+        };
+    </script>
+
+</body>
+
+</html>
+

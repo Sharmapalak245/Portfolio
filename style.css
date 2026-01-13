@@ -1,0 +1,205 @@
+/* ================= GENERAL STYLES ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7ff;
+    color: #333;
+    position: relative;
+}
+
+/* ================= BLUR EFFECT ================= */
+#pageContent.blur {
+    filter: blur(8px);
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #2c2c54;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 250px;
+}
+
+.profile-image {
+    height: 170px;
+    width: 100%;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c2c54;
+}
+
+/* ================= PROFILE IMAGE ================= */
+#profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+#profilePic:hover:not(.active) {
+    transform: translateX(-50%) translateY(-5px) scale(1.05);
+}
+
+#profilePic.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.2);
+    border-radius: 12px;
+    z-index: 9999;
+}
+
+/* ================= LISTS ================= */
+ul {
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ================= CLICKABLE ABOUT BOX (INDEX) ================= */
+.about-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.about-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= ABOUT PAGE ================= */
+.about-page {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 60px 80px;
+    background: rgba(245, 247, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(44, 44, 84, 0.15);
+    font-family: Arial, sans-serif;
+}
+
+.about-page h1 {
+    color: #2c2c54;
+    margin-bottom: 25px;
+}
+
+.about-page p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #2c2c54;
+    margin-bottom: 25px;
+}
+
+/* ================= BACK LINK ================= */
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #2c2c54;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ================= LEAF BACKGROUND ================= */
+.leaf-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+/* BASE LEAF STYLE (BLUE THEME) */
+.leaf {
+    position: absolute;
+    width: 90px;
+    height: 45px;
+    background: rgba(93, 93, 179, 0.25);
+    border-radius: 100% 0 100% 0;
+    transform: rotate(45deg);
+    filter: blur(0.4px);
+    z-index: 0;
+}
+
+/* OUTSIDE LEAVES */
+.leaf-1 { top: -30px; left: -60px; transform: rotate(25deg); }
+.leaf-2 { top: 60px; right: -70px; transform: rotate(-30deg); }
+.leaf-3 { bottom: 120px; left: -80px; transform: rotate(55deg); }
+.leaf-4 { bottom: -50px; right: 60px; transform: rotate(-40deg); }
+.leaf-5 { top: 40%; right: -90px; transform: rotate(70deg); }
+.leaf-6 { bottom: 30%; left: -100px; transform: rotate(-20deg); }
+
+/* INNER LEAVES */
+.inner-leaf {
+    width: 55px;
+    height: 28px;
+    background: rgba(93, 93, 179, 0.15);
+    filter: blur(0.3px);
+}
+
+.inner-1 { top: 25px; left: 40px; }
+.inner-2 { top: 120px; right: 80px; transform: rotate(-25deg); }
+.inner-3 { bottom: 140px; left: 70px; transform: rotate(60deg); }
+.inner-4 { bottom: 40px; right: 120px; transform: rotate(-50deg); }
+
+/* SUBTLE BACKGROUND GLOW */
+.leaf-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right,
+        rgba(93, 93, 179, 0.12),
+        transparent 60%);
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
